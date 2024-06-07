@@ -157,7 +157,7 @@ do{
 
                 # Split Computerinfo
                 $computerModel = $computerInfo.Model
-                $currentUser = $computerInfo.UserName.TrimStart("EUHCNET\")   
+                $currentUser = $computerInfo.UserName.TrimStart("[DOMAINNAME]\")   
                 # Write Information
                 Write-Host ""
                 Write-Host "Computer Name       :       $computer"
@@ -174,7 +174,7 @@ do{
                 $computerInfo = Get-ComputerInfo
                 # Split Computerinfo
                 $computerModel = $computerInfo.CsModel
-                $currentUser = $computerInfo.CsUserName.TrimStart("EUHCNET\")        
+                $currentUser = $computerInfo.CsUserName.TrimStart("[DOMAINNAME]\")        
                 # Write Information
                 Write-Host ""
                 Write-Host "Computer Name       :       $computer"
@@ -461,7 +461,7 @@ do{
                 # Get Local Computerinfo
                 $computerInfo = Get-ComputerInfo
                 # Split Computerinfo
-                $currentUser = $computerInfo.CsUserName.TrimStart("EUHCNET\")
+                $currentUser = $computerInfo.CsUserName.TrimStart("[DOMAINNAME]\")
 
                 # Send current local user message
                 if (!(msg.exe $currentUser /SERVER:$computer $msg)){
