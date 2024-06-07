@@ -26,6 +26,11 @@ $folder = "C:\Your\Very\Important\Folder\Path"
 # *.* Filters for all files ends
 $filter = "*.*"
 
+# Remove Event subscriptions, if $fsw is already filled so no double output happens
+if($fsw){
+    Get-EventSubscriber | Unregister-Event
+}
+
 $fsw = New-Object IO.FileSystemWatcher $folder, $filter
 $fsw.EnableRaisingEvents = $true
 $fsw.IncludeSubdirectories = $true
