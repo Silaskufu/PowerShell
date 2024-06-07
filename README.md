@@ -20,6 +20,7 @@ Modules: Reusable PowerShell modules that can be imported and used in other scri
 | server-Deployment-v2 | Automates the deployment of a new virtual machine (VM) using VMware vCenter and custom specifications. |
 | storage-Cleaner-v1   | Cleans up disk space on a remote computer by deleting contents of specified directories. |
 | tictactoe            | Script to play a simple command-line Tic-Tac-Toe game.|
+| folder-Monitoring-v1 | Allows you to monitor changes made to a specified filepath. |
 
 ## Language
 Please note that some files in this repository are written in English and others in German. This variation reflects my bilingual development process. Each script and project includes comments and documentation in the respective language to ensure clarity and usability.
